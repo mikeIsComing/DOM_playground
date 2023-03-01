@@ -10,10 +10,19 @@ function colorChange(event) {
   event.target.style.backgroundColor = randomColor;
 }
 
+document.getElementById("box").style.height = "10vh";
 
-
-document.getElementById("box").style.height = "100vh";
-
-const boxOne = document.getElementById('box');
+const boxOne = document.getElementById("box");
 
 boxOne.onwheel = colorChange;
+
+const moveNext = document.createElement("button");
+moveNext.id = "next-btn";
+moveNext.innerHTML = "next page";
+document.body.appendChild(moveNext);
+
+const changePage = () => {
+  window.location.href = "/index.html";
+};
+
+moveNext.onclick = changePage;
