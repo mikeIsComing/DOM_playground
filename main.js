@@ -102,4 +102,16 @@ subHeading.innerHTML = randomGreetings;
 header.appendChild(subHeading);
 
 
+switchBtn.innerHTML = 'Next';
+switchBtn.style.padding = "1rem 2rem";
 
+const moveNext = document.createElement('button');
+moveNext.id = "next-btn";
+moveNext.innerHTML = "next page";
+document.body.appendChild(moveNext);
+
+const changePage = () => {
+    window.location.href = "/secondPage.html";
+}
+
+moveNext.onclick = changePage;
